@@ -35,7 +35,9 @@ module.exports = {
 
   // After creating a value.
   // Fired after an `insert` query.
-  // afterCreate: async (model, attrs, options) => {},
+  afterCreate: async (model, attrs, options) => {
+    strapi.io.emit('case.new', model.toJSON())
+  },
 
   // Before updating a value.
   // Fired before an `update` query.
@@ -43,7 +45,9 @@ module.exports = {
 
   // After updating a value.
   // Fired after an `update` query.
-  // afterUpdate: async (model, attrs, options) => {},
+  afterUpdate: async (model, attrs, options) => {
+    strapi.io.emit('case.updated', model.toJSON())
+  },
 
   // Before destroying a value.
   // Fired before a `delete` query.

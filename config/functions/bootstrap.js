@@ -10,4 +10,16 @@
  * See more details here: https://strapi.io/documentation/3.0.0-beta.x/concepts/configurations.html#bootstrap
  */
 
-module.exports = () => {};
+module.exports = () => {
+  const io = require('socket.io')(strapi.server)
+
+  io.on('connection', socket => {
+    console.log(Date.now(), 'A client has connected.')
+
+    socket.on('disconnect', () => {
+      console.log(Date.now(), 'A client disconnected.')
+    })
+  })
+
+  strapi.io = io
+};
