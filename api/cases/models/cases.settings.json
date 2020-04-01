@@ -55,9 +55,6 @@
     "TravelHistory": {
       "type": "string"
     },
-    "LastUpdated": {
-      "type": "date"
-    },
     "OnsetOfSymptoms": {
       "type": "date"
     },
