@@ -1,0 +1,12 @@
+{
+    "routes": [
+        {
+            "method": "GET",
+            "path": "/figures",
+            "handler": "figures.index",
+            "config": {
+                "policies": []
+            }
+        }
+    ]
+}
