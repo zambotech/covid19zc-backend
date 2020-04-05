@@ -65,7 +65,9 @@
     "Status": {
       "type": "string",
       "required": true
+    },
+    "barangay": {
+      "model": "barangay"
     }
-
   }
 }
