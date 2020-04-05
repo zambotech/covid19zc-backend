@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "connection": "default",
+  "collectionName": "barangays",
+  "info": {
+    "name": "Barangay"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "Lat": {
+      "type": "decimal",
+      "required": true
+    },
+    "Long": {
+      "type": "decimal",
+      "required": true
+    },
+    "Status": {
+      "type": "enumeration",
+      "enum": [
+        "Lockdown",
+        "ECQ",
+        "CQ",
+        "Cleared",
+        "None"
+      ]
+    }
+  }
+}
