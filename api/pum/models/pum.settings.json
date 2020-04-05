@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "connection": "default",
+  "collectionName": "persons_under_monitorings",
+  "info": {
+    "name": "PUM"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Value": {
+      "type": "integer",
+      "required": true,
+      "min": 0
+    },
+    "DataUpdatedAt": {
+      "type": "datetime"
+    },
+    "Reference": {
+      "collection": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}
