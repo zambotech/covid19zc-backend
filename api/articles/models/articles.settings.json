@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "connection": "default",
+  "collectionName": "articles",
+  "info": {
+    "name": "Articles"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true
+    },
+    "Author": {
+      "type": "string",
+      "required": false
+    },
+    "SourceName": {
+      "type": "string",
+      "required": true
+    },
+    "SourceUrl": {
+      "type": "string",
+      "required": true
+    },
+    "PublishedDate": {
+      "type": "datetime",
+      "required": true
+    }
+  }
+}
