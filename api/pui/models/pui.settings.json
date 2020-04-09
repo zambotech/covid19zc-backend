@@ -10,15 +10,15 @@
     "timestamps": true
   },
   "attributes": {
-    "Value": {
+    "value": {
       "type": "integer",
       "required": true,
       "min": 0
     },
-    "DataUpdatedAt": {
+    "dataUpdatedAt": {
       "type": "datetime"
     },
-    "Reference": {
+    "reference": {
       "collection": "file",
       "via": "related",
       "plugin": "upload",

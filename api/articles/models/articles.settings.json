@@ -10,23 +10,23 @@
     "timestamps": true
   },
   "attributes": {
-    "Title": {
+    "title": {
       "type": "string",
       "required": true
     },
-    "Author": {
+    "author": {
       "type": "string",
       "required": false
     },
-    "SourceName": {
+    "sourceName": {
       "type": "string",
       "required": true
     },
-    "SourceUrl": {
+    "sourceUrl": {
       "type": "string",
       "required": true
     },
-    "PublishedDate": {
+    "publishedDate": {
       "type": "datetime",
       "required": true
     }
