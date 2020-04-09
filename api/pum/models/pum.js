@@ -37,6 +37,7 @@ module.exports = {
   // Fired after an `insert` query.
   afterCreate: async (model, attrs, options) => {
     strapi.io.emit('pum.new', model.toJSON())
+    strapi.io.emit('figures.new', {"type": "pum", "model": model.toJSON()})
   },
 
   // Before updating a value.
@@ -47,6 +48,7 @@ module.exports = {
   // Fired after an `update` query.
   afterUpdate: async (model, attrs, options) => {
     strapi.io.emit('pum.updated', model.toJSON())
+    strapi.io.emit('figures.updated', {"type": "pum", "model": model.toJSON()})
   },
 
   // Before destroying a value.
