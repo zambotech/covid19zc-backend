@@ -51,6 +51,22 @@ module.exports = {
                 cases.Elderly = true;
             else
                 cases.Elderly = false;
+
+            // Changes the `created_at` and `updated_at` to human-readable format.
+            const dateFormat = {
+                month: 'long',
+                day: 'numeric',
+                year: 'numeric',
+                hour: 'numeric',
+                minute: 'numeric'
+            }
+
+            var humanReadableCreatedAt = new Date(cases.created_at)
+            var humanReadableUpdatedAt = new Date(cases.updated_at)
+
+            cases.created_at = humanReadableCreatedAt.toLocaleString('en-PH', dateFormat)
+            cases.updated_at = humanReadableUpdatedAt.toLocaleString('en-PH', dateFormat)
+
             return cases;
         });
     },

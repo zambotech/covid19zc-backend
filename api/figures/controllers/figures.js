@@ -13,13 +13,16 @@ module.exports = {
       const puiDataCount = await strapi.query('pui').count();
       const confirmedCasesCount = await strapi.query('cases').count();
       const latestConfirmedCasesUpdated = await strapi.query('cases').find({ _sort: 'updated_at:desc' })
+
+      const pui = await strapi.query('pui').findOne({id: puiDataCount})
+      const pum = await strapi.query('pum').findOne({id: pumDataCount})
     
       const figures = {
-        pui: await strapi.query('pui').findOne({id: puiDataCount}),
-        pum: await strapi.query('pum').findOne({id: pumDataCount}),
+        pui: pui,
+        pum: pum,
         confirmed: {
           value: confirmedCasesCount,
-          updated_at: latestConfirmedCasesUpdated.shift().updated_at
+          updatedAtReadable: latestConfirmedCasesUpdated.shift().dateUpdatedAt
         }
       }
 
