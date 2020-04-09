@@ -21,6 +21,16 @@
         alert('A case has been updated.\nSee console logs.')
         console.log(Date.now(), 'UPDATED CASE:', { data })
       })
+
+      socket.on('figures.new', data => {
+        alert(data.type + " created!")
+        console.log(Date.now(), 'UPDATED FIGURE:', { data })
+      })
+
+      socket.on('figures.updated', data => {
+        alert(data.type + " updated!")
+        console.log(Date.now(), 'UPDATED FIGURE:', { data })
+      })
     })()
   </script>
 </body>
