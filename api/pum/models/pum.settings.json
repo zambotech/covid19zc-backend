@@ -16,7 +16,8 @@
       "min": 0
     },
     "dataUpdatedAt": {
-      "type": "datetime"
+      "type": "string",
+      "required": true
     },
     "reference": {
       "collection": "file",

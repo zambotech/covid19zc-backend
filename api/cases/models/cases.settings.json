@@ -66,6 +66,10 @@
       "type": "string",
       "required": true
     },
+    "dateUpdatedAt": {
+      "type": "string",
+      "required": true
+    },
     "barangay": {
       "model": "barangay"
     }
