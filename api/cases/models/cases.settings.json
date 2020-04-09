@@ -10,59 +10,59 @@
     "timestamps": true
   },
   "attributes": {
-    "Case": {
+    "case": {
       "type": "string",
       "required": true,
       "unique": true
     },
-    "Age": {
+    "age": {
       "type": "integer",
       "min": 0
     },
-    "Gender": {
+    "gender": {
       "type": "string",
       "maxLength": 1,
       "minLength": 1,
       "required": true
     },
-    "Nationality": {
+    "nationality": {
       "type": "string"
     },
-    "DateOfLabConfirmation": {
+    "dateOfLabConfirmation": {
       "type": "date"
     },
-    "Exposure": {
+    "exposure": {
       "type": "string"
     },
-    "FacilityOfAdmission": {
+    "facilityOfAdmission": {
       "type": "string"
     },
-    "ArrivalDate": {
+    "arrivalDate": {
       "type": "date"
     },
-    "WithCoMorbidity": {
+    "withCoMorbidity": {
       "type": "boolean"
     },
-    "PreviousConditions": {
+    "previousConditions": {
       "type": "string"
     },
-    "Symptoms": {
+    "symptoms": {
       "type": "string"
     },
-    "ResultDate": {
+    "resultDate": {
       "type": "date"
     },
-    "TravelHistory": {
+    "travelHistory": {
       "type": "string"
     },
-    "OnsetOfSymptoms": {
+    "onsetOfSymptoms": {
       "type": "date"
     },
-    "CurrentLocation": {
+    "currentLocation": {
       "type": "string",
       "required": true
     },
-    "Status": {
+    "status": {
       "type": "string",
       "required": true
     },
