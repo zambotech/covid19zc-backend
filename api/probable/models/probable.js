@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * Lifecycle callbacks for the `pum` model.
+ * Lifecycle callbacks for the `probable` model.
  */
 
 module.exports = {
@@ -36,8 +36,8 @@ module.exports = {
   // After creating a value.
   // Fired after an `insert` query.
   afterCreate: async (model, attrs, options) => {
-    strapi.io.emit('pum.new', model.toJSON())
-    strapi.io.emit('figures.new', {"type": "pum", "model": model.toJSON()})
+    strapi.io.emit('probable.new', model.toJSON())
+    strapi.io.emit('figures.new', {"type": "probable", "model": model.toJSON()})
   },
 
   // Before updating a value.
@@ -47,8 +47,8 @@ module.exports = {
   // After updating a value.
   // Fired after an `update` query.
   afterUpdate: async (model, attrs, options) => {
-    strapi.io.emit('pum.updated', model.toJSON())
-    strapi.io.emit('figures.updated', {"type": "pum", "model": model.toJSON()})
+    strapi.io.emit('probable.updated', model.toJSON())
+    strapi.io.emit('figures.updated', {"type": "probable", "model": model.toJSON()})
   },
 
   // Before destroying a value.

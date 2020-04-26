@@ -9,20 +9,20 @@ const { convertRestQueryParams } = require('strapi-utils');
 
 module.exports = {
   index: async ctx => {
-      const pumDataCount = await strapi.query('pum').count();
-      const puiDataCount = await strapi.query('pui').count();
+      const probableDataCount = await strapi.query('probable').count();
+      const suspectDataCount = await strapi.query('suspect').count();
       const confirmedCasesCount = await strapi.query('cases').count();
       const latestConfirmedCasesUpdated = await strapi.query('cases').find({ _sort: 'updated_at:desc' })
 
-      const pui = await strapi.query('pui').findOne({id: puiDataCount})
-      const pum = await strapi.query('pum').findOne({id: pumDataCount})
+      const suspect = await strapi.query('suspect').findOne({id: suspectDataCount})
+      const probable = await strapi.query('probable').findOne({id: probableDataCount})
     
       const figures = {
-        pui: pui,
-        pum: pum,
+        suspect: suspect,
+        probable: probable,
         confirmed: {
           value: confirmedCasesCount,
-          updatedAtReadable: latestConfirmedCasesUpdated.shift().dateUpdatedAt
+          dataUpdatedAt: latestConfirmedCasesUpdated.shift().dateUpdatedAt
         }
       }
 

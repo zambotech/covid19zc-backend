@@ -1,9 +1,9 @@
 {
   "kind": "collectionType",
   "connection": "default",
-  "collectionName": "persons_under_monitorings",
+  "collectionName": "probables",
   "info": {
-    "name": "PUM"
+    "name": "Probable"
   },
   "options": {
     "increments": true,

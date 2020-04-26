@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * Lifecycle callbacks for the `pui` model.
+ * Lifecycle callbacks for the `suspect` model.
  */
 
 module.exports = {
@@ -36,8 +36,8 @@ module.exports = {
   // After creating a value.
   // Fired after an `insert` query.
   afterCreate: async (model, attrs, options) => {
-    strapi.io.emit('pui.new', model.toJSON())
-    strapi.io.emit('figures.new', {"type": "pui", "model": model.toJSON()})
+    strapi.io.emit('suspect.new', model.toJSON())
+    strapi.io.emit('figures.new', {"type": "suspect", "model": model.toJSON()})
   },
 
   // Before updating a value.
@@ -47,8 +47,8 @@ module.exports = {
   // After updating a value.
   // Fired after an `update` query.
   afterUpdate: async (model, attrs, options) => {
-    strapi.io.emit('pui.updated', model.toJSON())
-    strapi.io.emit('figures.updated', {"type": "pui", "model": model.toJSON()})
+    strapi.io.emit('suspect.updated', model.toJSON())
+    strapi.io.emit('figures.updated', {"type": "suspect", "model": model.toJSON()})
   },
 
   // Before destroying a value.

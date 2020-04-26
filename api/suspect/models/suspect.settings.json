@@ -1,9 +1,9 @@
 {
   "kind": "collectionType",
   "connection": "default",
-  "collectionName": "puis",
+  "collectionName": "suspects",
   "info": {
-    "name": "PUI"
+    "name": "Suspect"
   },
   "options": {
     "increments": true,
