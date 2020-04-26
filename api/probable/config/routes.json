@@ -2,48 +2,48 @@
   "routes": [
     {
       "method": "GET",
-      "path": "/puis",
-      "handler": "pui.find",
+      "path": "/probable",
+      "handler": "probable.find",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/puis/count",
-      "handler": "pui.count",
+      "path": "/probable/count",
+      "handler": "probable.count",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/puis/:id",
-      "handler": "pui.findOne",
+      "path": "/probable/:id",
+      "handler": "probable.findOne",
       "config": {
         "policies": []
       }
     },
     {
       "method": "POST",
-      "path": "/puis",
-      "handler": "pui.create",
+      "path": "/probable",
+      "handler": "probable.create",
       "config": {
         "policies": []
       }
     },
     {
       "method": "PUT",
-      "path": "/puis/:id",
-      "handler": "pui.update",
+      "path": "/probable/:id",
+      "handler": "probable.update",
       "config": {
         "policies": []
       }
     },
     {
       "method": "DELETE",
-      "path": "/puis/:id",
-      "handler": "pui.delete",
+      "path": "/probable/:id",
+      "handler": "probable.delete",
       "config": {
         "policies": []
       }
