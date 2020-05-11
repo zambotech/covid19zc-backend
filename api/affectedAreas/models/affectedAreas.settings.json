@@ -3,7 +3,7 @@
   "connection": "default",
   "collectionName": "barangays",
   "info": {
-    "name": "Barangay"
+    "name": "affectedAreas"
   },
   "options": {
     "increments": true,
