@@ -2,48 +2,48 @@
   "routes": [
     {
       "method": "GET",
-      "path": "/barangays",
-      "handler": "barangay.find",
+      "path": "/affectedAreas",
+      "handler": "affectedAreas.find",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/barangays/count",
-      "handler": "barangay.count",
+      "path": "/affectedAreas/count",
+      "handler": "affectedAreas.count",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/barangays/:id",
-      "handler": "barangay.findOne",
+      "path": "/affectedAreas/:id",
+      "handler": "affectedAreas.findOne",
       "config": {
         "policies": []
       }
     },
     {
       "method": "POST",
-      "path": "/barangays",
-      "handler": "barangay.create",
+      "path": "/affectedAreas",
+      "handler": "affectedAreas.create",
       "config": {
         "policies": []
       }
     },
     {
       "method": "PUT",
-      "path": "/barangays/:id",
-      "handler": "barangay.update",
+      "path": "/affectedAreas/:id",
+      "handler": "affectedAreas.update",
       "config": {
         "policies": []
       }
     },
     {
       "method": "DELETE",
-      "path": "/barangays/:id",
-      "handler": "barangay.delete",
+      "path": "/affectedAreas/:id",
+      "handler": "affectedAreas.delete",
       "config": {
         "policies": []
       }

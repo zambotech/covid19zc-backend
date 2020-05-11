@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * Lifecycle callbacks for the `barangay` model.
+ * Lifecycle callbacks for the `affectedAreas` model.
  */
 
 module.exports = {
@@ -36,7 +36,7 @@ module.exports = {
   // After creating a value.
   // Fired after an `insert` query.
   afterCreate: async (model, attrs, options) => {
-    strapi.io.emit('barangay.new', model.toJSON())
+    strapi.io.emit('affectedAreas.new', model.toJSON())
   },
 
   // Before updating a value.
@@ -46,7 +46,7 @@ module.exports = {
   // After updating a value.
   // Fired after an `update` query.
   afterUpdate: async (model, attrs, options) => {
-    strapi.io.emit('barangay.updated', model.toJSON())
+    strapi.io.emit('affectedAreas.updated', model.toJSON())
   },
 
   // Before destroying a value.
