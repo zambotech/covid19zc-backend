@@ -25,12 +25,17 @@
     "Status": {
       "type": "enumeration",
       "enum": [
-        "Lockdown",
         "ECQ",
-        "CQ",
-        "Cleared",
+        "MECQ",
+        "GCQ",
+        "MGCQ",
+        "New Normal",
         "None"
       ]
+    },
+    "Cases": {
+      "type": "integer",
+      "required": true
     }
   }
 }

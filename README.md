@@ -17,9 +17,9 @@
 ### API Endpoints
 | Method        | Path           | Description  | Parameters | Response
 | ------------- |-------------| -----| --- | -- |
-| **GET**      | `/cases` | Gets all cases |  | ``` [ { "id": 1, "Case": "ZP01",... } ] ``` |
-| **GET**      | `/cases/:id` | Gets specific case  | *id* | ```{ "id": 1, "Case": "ZP01",... }```
-| **GET**      | `/figures` | Retrieves current counts of PUIs, PUMs, and confirmed cases in Zamboanga City.  | *id* | ```{ "pui": { "Value": 75, ... }, "pum": { "Value": 2381, ... }, "confirmed": { "value": 5, ... } }```
-| **GET**      | `/puis` | Gets all PUI count |  | ``` [ { "id": 1, "Value": 93, "DataUpdatedAt": "2020-04-06T00:00:00Z... }, ... ] ``` |
-| **GET**      | `/pums` | Gets all PUM count |  | ``` [ { "id": 1, "Value": 2381, "DataUpdatedAt": "2020-04-06T00:00:00Z... }, ... ] ``` |
+| **GET**      | `/figures` | Retrieves current counts of suspected, probable, active, and total cases in Zamboanga City.  | *id* | ```{ "pui": { "Value": 75, ... }, "pum": { "Value": 2381, ... }, "confirmed": { "value": 5, ... } }```
+| **GET**      | `/suspect` | Gets all supected cases count record. |  | ``` [ { "id": 1, "Value": 93, "DataUpdatedAt": "2020-04-06T00:00:00Z... }, ... ] ``` |
+| **GET**      | `/probable` | Gets all probable cases count record. |  | ``` [ { "id": 1, "Value": 2381, "DataUpdatedAt": "2020-04-06T00:00:00Z... }, ... ] ``` |
+| **GET**      | `/activecases` | Gets all active cases count record. |  | ``` [ { "id": 1, "Value": 2381, "DataUpdatedAt": "2020-04-06T00:00:00Z... }, ... ] ``` |
+| **GET**      | `/affectedareas` | Gets all affected areas. |  | ``` [ { "id": 1, "Value": 2381, "DataUpdatedAt": "2020-04-06T00:00:00Z... }, ... ] ``` |
 | **POST**      | `/auth/local` | Attempts to login the user using the specified credentials. If successful, returns a token and the user's profile.  | *identifier* and *password* | ```{ "jwt": "TOKEN_HERE", "user": {...} }```
