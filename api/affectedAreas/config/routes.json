@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/affectedAreas",
+      "handler": "affectedAreas.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/affectedAreas/count",
+      "handler": "affectedAreas.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/affectedAreas/:id",
+      "handler": "affectedAreas.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/affectedAreas",
+      "handler": "affectedAreas.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/affectedAreas/:id",
+      "handler": "affectedAreas.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/affectedAreas/:id",
+      "handler": "affectedAreas.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

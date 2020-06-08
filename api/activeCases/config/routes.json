@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/activeCases",
+      "handler": "activeCases.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/activeCases/count",
+      "handler": "activeCases.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/activeCases/:id",
+      "handler": "activeCases.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/activeCases",
+      "handler": "activeCases.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/activeCases/:id",
+      "handler": "activeCases.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/activeCases/:id",
+      "handler": "activeCases.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

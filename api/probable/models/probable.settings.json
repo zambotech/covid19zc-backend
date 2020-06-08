@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "connection": "default",
+  "collectionName": "probables",
+  "info": {
+    "name": "Probable"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "value": {
+      "type": "integer",
+      "required": true,
+      "min": 0
+    },
+    "dataUpdatedAt": {
+      "type": "string",
+      "required": true
+    },
+    "reference": {
+      "collection": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}

@@ -9,21 +9,30 @@ const { convertRestQueryParams } = require('strapi-utils');
 
 module.exports = {
   index: async ctx => {
-      const pumDataCount = await strapi.query('pum').count();
-      const puiDataCount = await strapi.query('pui').count();
-      const confirmedCasesCount = await strapi.query('cases').count();
-      const latestConfirmedCasesUpdated = await strapi.query('cases').find({ _sort: 'updated_at:desc' })
+      const probableDataCount = await strapi.query('probable').count();
+      const suspectDataCount = await strapi.query('suspect').count();
+      const activeCasesCount = await strapi.query('activeCases').count();
+      const totalCasesInAffectedAreasCount = await strapi.query('affectedAreas').count()
+      const totalCasesInAffectedAreasQuery = await strapi.query('affectedAreas').find()
 
-      const pui = await strapi.query('pui').findOne({id: puiDataCount})
-      const pum = await strapi.query('pum').findOne({id: pumDataCount})
+      var totalCasesInAffectedAreas = 0
+      for(var x = 0; x < totalCasesInAffectedAreasCount; x++)
+      {
+        totalCasesInAffectedAreas += totalCasesInAffectedAreasQuery[x].Cases
+      }
+
+      const suspect = await strapi.query('suspect').findOne({id: suspectDataCount})
+      const probable = await strapi.query('probable').findOne({id: probableDataCount})
+      const active = await strapi.query('activeCases').findOne({id: activeCasesCount})
     
       const figures = {
-        pui: pui,
-        pum: pum,
-        confirmed: {
-          value: confirmedCasesCount,
-          updatedAtReadable: latestConfirmedCasesUpdated.shift().dateUpdatedAt
-        }
+        suspect: suspect,
+        probable: probable,
+        active: {
+          value: activeCasesCount,
+          dataUpdatedAt: active.dateUpdatedAt
+        },
+        totalCases: totalCasesInAffectedAreas
       }
 
       return figures;

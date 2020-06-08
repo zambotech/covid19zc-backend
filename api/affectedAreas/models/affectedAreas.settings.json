@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "connection": "default",
+  "collectionName": "barangays",
+  "info": {
+    "name": "affectedAreas"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "Lat": {
+      "type": "decimal",
+      "required": true
+    },
+    "Long": {
+      "type": "decimal",
+      "required": true
+    },
+    "Status": {
+      "type": "enumeration",
+      "enum": [
+        "ECQ",
+        "MECQ",
+        "GCQ",
+        "MGCQ",
+        "New Normal",
+        "None"
+      ]
+    },
+    "Cases": {
+      "type": "integer",
+      "required": true
+    }
+  }
+}
