@@ -14,7 +14,7 @@
     "knex": "<0.20.0",
     "socket.io": "^2.3.0",
     "sqlite3": "latest",
-    "strapi": "3.0.0-beta.19.3",
+    "strapi": "3.2.5",
     "strapi-admin": "3.0.0-beta.19.3",
     "strapi-connector-bookshelf": "3.0.0-beta.19.3",
     "strapi-plugin-content-manager": "3.0.0-beta.19.3",
